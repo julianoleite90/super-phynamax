@@ -1,46 +1,113 @@
-# Getting Started with Create React App
+# 🚀 Phynamax - Site Oficial
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Site oficial do Phynamax - Emagrecedor natural mais usado em 2025.
 
-## Available Scripts
+## ✨ Funcionalidades
 
-In the project directory, you can run:
+- 🏠 **Página Principal** - Landing page completa com kits e CTAs
+- 📱 **Página de Remarketing** - Otimizada para campanhas de retargeting
+- 📋 **Termos de Garantia** - Página dedicada aos termos
+- 🔍 **SEO Otimizado** - Structured data, sitemap e meta tags
+- 📊 **Google Analytics** - Tracking completo de conversões
+- 🛒 **Google Merchant** - Configurado para vendas online
+- 📱 **Responsivo** - Design mobile-first com Tailwind CSS
 
-### `npm start`
+## 🛠️ Tecnologias
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React 19** - Framework principal
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Framework de estilos
+- **React Router** - Navegação SPA
+- **Vercel** - Deploy e hosting
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🚀 Instalação
 
-### `npm test`
+```bash
+# Clone o repositório
+git clone https://github.com/julianoleite90/super-phynamax.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Entre na pasta
+cd super-phynamax
 
-### `npm run build`
+# Instale as dependências
+npm install --legacy-peer-deps
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Inicie o servidor de desenvolvimento
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📦 Scripts Disponíveis
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `npm start` - Inicia o servidor de desenvolvimento
+- `npm run build` - Cria build de produção
+- `npm test` - Executa os testes
+- `npm run eject` - Ejecta do Create React App
 
-### `npm run eject`
+## 🌐 Deploy
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+O projeto está configurado para deploy automático no Vercel:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Conecte o repositório ao Vercel
+2. O build será executado automaticamente
+3. As rotas estão configuradas no `vercel.json`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 📁 Estrutura do Projeto
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+src/
+├── components/
+│   ├── HeroSection.tsx      # Página principal
+│   ├── Remarketing.tsx      # Página de remarketing
+│   └── TermosGarantia.tsx   # Termos de garantia
+├── App.tsx                  # Configuração de rotas
+└── index.tsx                # Ponto de entrada
 
-## Learn More
+public/
+├── sitemap.xml             # Sitemap para SEO
+├── robots.txt              # Configuração de crawlers
+└── favicon.png             # Favicon do site
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🔗 URLs Disponíveis
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Página Principal**: `/`
+- **Remarketing**: `/remarketing`
+- **Termos de Garantia**: `/termos-garantia`
+
+## 📊 Analytics
+
+- **Google Analytics**: G-GEJ71JEFEM
+- **Tracking**: Todos os CTAs com parâmetros de origem
+- **Conversões**: Rastreadas por página e campanha
+
+## 🎯 SEO
+
+- **Meta Tags** otimizadas
+- **Structured Data** (Schema.org)
+- **Sitemap XML** configurado
+- **Robots.txt** atualizado
+- **Open Graph** para redes sociais
+
+## 📱 Responsividade
+
+- **Mobile-first** design
+- **Breakpoints** otimizados
+- **Touch-friendly** interfaces
+- **Performance** otimizada
+
+## 🚀 Deploy no Vercel
+
+O projeto está configurado para deploy automático no Vercel com:
+
+- **Build Command**: `npm run build`
+- **Install Command**: `npm install --legacy-peer-deps`
+- **Output Directory**: `build`
+- **SPA Routing**: Configurado para React Router
+
+## 📞 Suporte
+
+Para suporte técnico ou dúvidas sobre o projeto, entre em contato através do repositório GitHub.
+
+---
+
+**Phynamax** - Emagrecedor natural mais usado em 2025 🎯
