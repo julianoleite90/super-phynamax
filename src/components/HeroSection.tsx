@@ -629,6 +629,568 @@ const HeroSection = () => {
         </div>
       </section>
 
+      {/* Comentários Recentes Section */}
+      <section className="bg-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+        <div className="container-custom text-center">
+          <p className="text-black text-2xl sm:text-3xl lg:text-4xl font-bold tracking-wide underline mb-8 sm:mb-10 lg:mb-12">
+            COMENTÁRIOS RECENTES
+          </p>
+          
+          {/* Seta Pulsante */}
+          <div className="flex justify-center -mb-20 sm:-mb-16 lg:-mb-20">
+            <div className="animate-bounce">
+              <svg className="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Instagram Feed Section */}
+      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            
+            {/* Post 1 - Com Foto */}
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              {/* Header do Post */}
+              <div className="flex items-center p-3 border-b border-gray-100">
+                <img 
+                  src="/ig1.png" 
+                  alt="Avatar Maria" 
+                  className="w-8 h-8 rounded-full object-cover"
+                />
+                <div className="ml-3 flex-1">
+                  <div className="font-semibold text-sm text-gray-900">maria_silva</div>
+                  <div className="text-xs text-gray-500">São Paulo, SP</div>
+                </div>
+                <button className="text-gray-400 hover:text-gray-600">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Conteúdo da Imagem */}
+              <div className="relative cursor-pointer group" onClick={() => openImageModal('/im-dep-1.png')}>
+                <img 
+                  src="/im-dep-1.png" 
+                  alt="Resultado Phynamax" 
+                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                {/* Overlay com texto */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                  <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
+                    <div className="bg-black/70 px-3 py-2 rounded-lg">
+                      <span className="text-sm font-semibold">Clique para ampliar</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Ações */}
+              <div className="p-3">
+                <div className="flex items-center space-x-4 mb-3">
+                  <button className="text-gray-600 hover:text-red-500 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </button>
+                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                  </button>
+                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                    </svg>
+                  </button>
+                  <div className="ml-auto">
+                    <button className="text-gray-600 hover:text-gray-800 transition-colors">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Likes */}
+                <div className="text-sm font-semibold text-gray-900 mb-2">Curtido por <span className="text-blue-600">carla_emagreceu</span> e <span className="text-blue-600">outras 127 pessoas</span></div>
+
+                {/* Caption */}
+                <div className="text-sm text-gray-900 mb-2">
+                  <span className="font-semibold">maria_silva</span> Finalmente consegui perder 18kg com Phynamax! 🎉 
+                  <br />Depois de 3 meses, minha autoestima mudou completamente! 
+                  <br />#emagrecimento #phynamax #resultados #foco
+                </div>
+
+                {/* Comentários */}
+                <div className="space-y-2 mb-3">
+                  <div className="text-sm">
+                    <span className="font-semibold text-gray-900">ana_clara</span>
+                    <span className="text-gray-700 ml-2">Parabéns! Estou tomando também! 💪</span>
+                  </div>
+                  <div className="text-sm">
+                    <span className="font-semibold text-gray-900">pedro_santos</span>
+                    <span className="text-gray-700 ml-2">Incrível! Quanto tempo demorou?</span>
+                  </div>
+                </div>
+
+                {/* Horário */}
+                <div className="text-xs text-gray-500">HÁ 3 DIAS</div>
+              </div>
+            </div>
+
+            {/* Post 2 - Com Vídeo */}
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              {/* Header do Post */}
+              <div className="flex items-center p-3 border-b border-gray-100">
+                <img 
+                  src="/ig2.png" 
+                  alt="Avatar Carlos" 
+                  className="w-8 h-8 rounded-full object-cover"
+                />
+                <div className="ml-3 flex-1">
+                  <div className="font-semibold text-sm text-gray-900">ana_paula</div>
+                  <div className="text-xs text-gray-500">Curitiba, PR</div>
+                </div>
+                <button className="text-gray-400 hover:text-gray-600">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Conteúdo do Vídeo */}
+              <div className="relative">
+                <iframe 
+                  src="https://player.vimeo.com/video/1112916686?h=64c0c0c0c0&autoplay=0&loop=0&title=0&byline=0&portrait=0" 
+                  className="w-full h-64"
+                  frameBorder="0" 
+                  allow="autoplay; fullscreen; picture-in-picture" 
+                  allowFullScreen
+                  title="Vídeo Carlos Lima - Treino"
+                ></iframe>
+              </div>
+
+              {/* Ações */}
+              <div className="p-3">
+                <div className="flex items-center space-x-4 mb-3">
+                  <button className="text-gray-600 hover:text-red-500 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </button>
+                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                  </button>
+                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                    </svg>
+                  </button>
+                  <div className="ml-auto">
+                    <button className="text-gray-600 hover:text-gray-800 transition-colors">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Likes */}
+                <div className="text-sm font-semibold text-gray-900 mb-2">Curtido por <span className="text-blue-600">maria_silva</span> e <span className="text-blue-600">outras 89 pessoas</span></div>
+
+                {/* Caption */}
+                <div className="text-sm text-gray-900 mb-2">
+                  <span className="font-semibold">ana_paula</span> Treino pesado hoje! 💪 
+                  <br />Com Phynamax controlando o apetite, fica mais fácil manter o foco! 
+                  <br />#treino #foco #phynamax #academia
+                </div>
+
+                {/* Comentários */}
+                <div className="space-y-2 mb-3">
+                  <div className="text-sm">
+                    <span className="font-semibold text-gray-900">joao_fitness</span>
+                    <span className="text-gray-700 ml-2">Boa! Está funcionando mesmo! 🔥</span>
+                  </div>
+                </div>
+
+                {/* Horário */}
+                <div className="text-xs text-gray-500">HÁ 1 SEMANA</div>
+              </div>
+            </div>
+
+            {/* Post 3 - Com Foto */}
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              {/* Header do Post */}
+              <div className="flex items-center p-3 border-b border-gray-100">
+                <img 
+                  src="/ig3.png" 
+                  alt="Avatar Julia" 
+                  className="w-8 h-8 rounded-full object-cover"
+                />
+                <div className="ml-3 flex-1">
+                  <div className="font-semibold text-sm text-gray-900">julia_costa</div>
+                  <div className="text-xs text-gray-500">Belo Horizonte, MG</div>
+                </div>
+                <button className="text-gray-400 hover:text-gray-600">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Conteúdo da Imagem */}
+              <div className="relative cursor-pointer group" onClick={() => openImageModal('/im-3-dep.png')}>
+                <img 
+                  src="/im-3-dep.png" 
+                  alt="Resultado Phynamax" 
+                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                {/* Overlay com texto */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                  <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
+                    <div className="bg-black/70 px-3 py-2 rounded-lg">
+                      <span className="text-sm font-semibold">Clique para ampliar</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Ações */}
+              <div className="p-3">
+                <div className="flex items-center space-x-4 mb-3">
+                  <button className="text-red-500">
+                    <svg className="w-6 h-6" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </button>
+                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                  </button>
+                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                    </svg>
+                  </button>
+                  <div className="ml-auto">
+                    <button className="text-gray-600 hover:text-gray-800 transition-colors">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Likes */}
+                <div className="text-sm font-semibold text-gray-900 mb-2">Curtido por <span className="text-blue-600">carlos_lima</span> e <span className="text-blue-600">outras 203 pessoas</span></div>
+
+                {/* Caption */}
+                <div className="text-sm text-gray-900 mb-2">
+                  <span className="font-semibold">julia_costa</span> Antes e depois! 😍 
+                  <br />Phynamax mudou minha vida! Perdi 22kg em 4 meses! 
+                  <br />#antesedepois #phynamax #transformacao #feliz
+                </div>
+
+                {/* Comentários */}
+                <div className="space-y-2 mb-3">
+                  <div className="text-sm">
+                    <span className="font-semibold text-gray-900">ana_maria</span>
+                    <span className="text-gray-700 ml-2">Que transformação incrível! 👏</span>
+                  </div>
+                  <div className="text-sm">
+                    <span className="font-semibold text-gray-900">pedro_emagreceu</span>
+                    <span className="text-gray-700 ml-2">Parabéns! Estou no mesmo caminho! 💪</span>
+                  </div>
+                </div>
+
+                {/* Horário */}
+                <div className="text-xs text-gray-500">HÁ 2 SEMANAS</div>
+              </div>
+            </div>
+
+            {/* Post 4 - Com Vídeo */}
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              {/* Header do Post */}
+              <div className="flex items-center p-3 border-b border-gray-100">
+                <img 
+                  src="/ig4.png" 
+                  alt="Avatar Roberto" 
+                  className="w-8 h-8 rounded-full object-cover"
+                />
+                <div className="ml-3 flex-1">
+                  <div className="font-semibold text-sm text-gray-900">ana_silva</div>
+                  <div className="text-xs text-gray-500">Salvador, BA</div>
+                </div>
+                <button className="text-gray-400 hover:text-gray-600">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Conteúdo do Vídeo */}
+              <div className="relative">
+                <iframe 
+                  src="https://player.vimeo.com/video/1104572615?h=64c0c0c0c0&autoplay=0&loop=0&title=0&byline=0&portrait=0" 
+                  className="w-full h-64"
+                  frameBorder="0" 
+                  allow="autoplay; fullscreen; picture-in-picture" 
+                  allowFullScreen
+                  title="Vídeo Roberto Silva - Corrida"
+                ></iframe>
+              </div>
+
+              {/* Ações */}
+              <div className="p-3">
+                <div className="flex items-center space-x-4 mb-3">
+                  <button className="text-gray-600 hover:text-red-500 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </button>
+                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                  </button>
+                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                    </svg>
+                  </button>
+                  <div className="ml-auto">
+                    <button className="text-gray-600 hover:text-gray-800 transition-colors">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Likes */}
+                <div className="text-sm font-semibold text-gray-900 mb-2">Curtido por <span className="text-blue-600">julia_costa</span> e <span className="text-blue-600">outras 156 pessoas</span></div>
+
+                {/* Caption */}
+                <div className="text-sm text-gray-900 mb-2">
+                  <span className="font-semibold">ana_silva</span> Corrida matinal! 🏃‍♂️ 
+                  <br />Com Phynamax controlando a fome, consigo treinar melhor! 
+                  <br />#corrida #manha #phynamax #energia
+                </div>
+
+                {/* Comentários */}
+                <div className="space-y-2 mb-3">
+                  <div className="text-sm">
+                    <span className="font-semibold text-gray-900">maria_atleta</span>
+                    <span className="text-gray-700 ml-2">Boa! Está funcionando mesmo! 💪</span>
+                  </div>
+                </div>
+
+                {/* Horário */}
+                <div className="text-xs text-gray-500">HÁ 2 MESES</div>
+              </div>
+            </div>
+
+            {/* Post 5 - Com Foto */}
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              {/* Header do Post */}
+              <div className="flex items-center p-3 border-b border-gray-100">
+                <img 
+                  src="/ig5.png" 
+                  alt="Avatar Amanda" 
+                  className="w-8 h-8 rounded-full object-cover"
+                />
+                <div className="ml-3 flex-1">
+                  <div className="font-semibold text-sm text-gray-900">roberto_queiroz</div>
+                  <div className="text-xs text-gray-500">Porto Alegre, RS</div>
+                </div>
+                <button className="text-gray-400 hover:text-gray-600">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Conteúdo da Imagem */}
+              <div className="relative cursor-pointer group" onClick={() => openImageModal('/im-5-dep.png')}>
+                <img 
+                  src="/im-5-dep.png" 
+                  alt="Resultado Phynamax" 
+                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                {/* Overlay com texto */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                  <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
+                    <div className="bg-black/70 px-3 py-2 rounded-lg">
+                      <span className="text-sm font-semibold">Clique para ampliar</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Ações */}
+              <div className="p-3">
+                <div className="flex items-center space-x-4 mb-3">
+                  <button className="text-gray-600 hover:text-red-500 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </button>
+                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                  </button>
+                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                    </svg>
+                  </button>
+                  <div className="ml-auto">
+                    <button className="text-gray-600 hover:text-gray-800 transition-colors">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Likes */}
+                <div className="text-sm font-semibold text-gray-900 mb-2">Curtido por <span className="text-blue-600">roberto_silva</span> e <span className="text-blue-600">outras 98 pessoas</span></div>
+
+                {/* Caption */}
+                <div className="text-sm text-gray-900 mb-2">
+                  <span className="font-semibold">roberto_queiroz</span> Almoço saudável! 🥗 
+                  <br />Phynamax me ajudou a controlar a compulsão por doces! 
+                  <br />#alimentacaosaudavel #phynamax #controle #foco
+                </div>
+
+                {/* Comentários */}
+                <div className="space-y-2 mb-3">
+                  <div className="text-sm">
+                    <span className="font-semibold text-gray-900">carla_nutri</span>
+                    <span className="text-gray-700 ml-2">Que prato lindo! 👏</span>
+                  </div>
+                </div>
+
+                {/* Horário */}
+                <div className="text-xs text-gray-500">HÁ 2 MESES</div>
+              </div>
+            </div>
+
+            {/* Post 6 - Com Vídeo */}
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              {/* Header do Post */}
+              <div className="flex items-center p-3 border-b border-gray-100">
+                <img 
+                  src="/ig6.png" 
+                  alt="Avatar Lucas" 
+                  className="w-8 h-8 rounded-full object-cover"
+                />
+                <div className="ml-3 flex-1">
+                  <div className="font-semibold text-sm text-gray-900">luana_pereira</div>
+                  <div className="text-xs text-gray-500">Recife, PE</div>
+                </div>
+                <button className="text-gray-400 hover:text-gray-600">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Conteúdo da Imagem */}
+              <div className="relative cursor-pointer group" onClick={() => openImageModal('/im-6-dep.png')}>
+                <img 
+                  src="/im-6-dep.png" 
+                  alt="Resultado Phynamax" 
+                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                {/* Overlay com texto */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                  <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
+                    <div className="bg-black/70 px-3 py-2 rounded-lg">
+                      <span className="text-sm font-semibold">Clique para ampliar</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Ações */}
+              <div className="p-3">
+                <div className="flex items-center space-x-4 mb-3">
+                  <button className="text-gray-600 hover:text-red-500 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </button>
+                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                  </button>
+                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                    </svg>
+                  </button>
+                  <div className="ml-auto">
+                    <button className="text-gray-600 hover:text-gray-800 transition-colors">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Likes */}
+                <div className="text-sm font-semibold text-gray-900 mb-2">Curtido por <span className="text-blue-600">amanda_pereira</span> e <span className="text-blue-600">outras 134 pessoas</span></div>
+
+                {/* Caption */}
+                <div className="text-sm text-gray-900 mb-2">
+                  <span className="font-semibold">luana_pereira</span> Domingo na praia! 🏖️ 
+                  <br />Com Phynamax controlando o apetite, aproveito melhor! 
+                  <br />#praia #domingo #phynamax #vida
+                </div>
+
+                {/* Comentários */}
+                <div className="space-y-2 mb-3">
+                  <div className="text-sm">
+                    <span className="font-semibold text-gray-900">maria_praia</span>
+                    <span className="text-gray-700 ml-2">Que lugar lindo! 😍</span>
+                  </div>
+                </div>
+
+                {/* Horário */}
+                <div className="text-xs text-gray-500">HÁ 3 MESES</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* CTA Centralizado */}
+        <div className="text-center mt-12">
+          <button 
+            onClick={scrollToKits}
+            className="w-full lg:w-auto bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold py-3 px-6 rounded-xl text-sm lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            <div className="text-center">
+              <div className="text-base lg:text-xl">SIM, QUERO EXPERIMENTAR AGORA</div>
+              <div className="text-xs lg:text-sm font-normal opacity-90 mt-1">
+                CLIQUE AQUI E GARANTA SEU KIT COM DESCONTO
+              </div>
+            </div>
+          </button>
+        </div>
+      </section>
+
       {/* Compra Segura Section */}
       <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
         <div className="container-custom">
@@ -1001,558 +1563,8 @@ const HeroSection = () => {
         </div>
       </section>
 
-      {/* Comentários Recentes Section */}
-      <section className="bg-pink-600 py-8 px-4 sm:px-6 lg:px-8">
-        <div className="container-custom text-center">
-          <p className="text-white text-xl sm:text-2xl lg:text-3xl font-bold tracking-wide">
-            COMENTÁRIOS RECENTES
-          </p>
-        </div>
-      </section>
-
       {/* Instagram Feed Section */}
-      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            
-            {/* Post 1 - Com Foto */}
-            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              {/* Header do Post */}
-              <div className="flex items-center p-3 border-b border-gray-100">
-                <img 
-                  src="/ig1.png" 
-                  alt="Avatar Maria" 
-                  className="w-8 h-8 rounded-full object-cover"
-                />
-                <div className="ml-3 flex-1">
-                  <div className="font-semibold text-sm text-gray-900">maria_silva</div>
-                  <div className="text-xs text-gray-500">São Paulo, SP</div>
-                </div>
-                <button className="text-gray-400 hover:text-gray-600">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                  </svg>
-                </button>
-              </div>
 
-              {/* Conteúdo da Imagem */}
-              <div className="relative cursor-pointer group" onClick={() => openImageModal('/im-dep-1.png')}>
-                <img 
-                  src="/im-dep-1.png" 
-                  alt="Resultado Phynamax" 
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                {/* Overlay com texto */}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
-                  <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
-                    <div className="bg-black/70 px-3 py-2 rounded-lg">
-                      <span className="text-sm font-semibold">Clique para ampliar</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Ações */}
-              <div className="p-3">
-                <div className="flex items-center space-x-4 mb-3">
-                  <button className="text-gray-600 hover:text-red-500 transition-colors">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                  </button>
-                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                    </svg>
-                  </button>
-                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
-                    </svg>
-                  </button>
-                  <div className="ml-auto">
-                    <button className="text-gray-600 hover:text-gray-800 transition-colors">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-
-                {/* Likes */}
-                <div className="text-sm font-semibold text-gray-900 mb-2">Curtido por <span className="text-blue-600">carla_emagreceu</span> e <span className="text-blue-600">outras 127 pessoas</span></div>
-
-                {/* Caption */}
-                <div className="text-sm text-gray-900 mb-2">
-                  <span className="font-semibold">maria_silva</span> Finalmente consegui perder 18kg com Phynamax! 🎉 
-                  <br />Depois de 3 meses, minha autoestima mudou completamente! 
-                  <br />#emagrecimento #phynamax #resultados #foco
-                </div>
-
-                {/* Comentários */}
-                <div className="space-y-2 mb-3">
-                  <div className="text-sm">
-                    <span className="font-semibold text-gray-900">ana_clara</span>
-                    <span className="text-gray-700 ml-2">Parabéns! Estou tomando também! 💪</span>
-                  </div>
-                  <div className="text-sm">
-                    <span className="font-semibold text-gray-900">pedro_santos</span>
-                    <span className="text-gray-700 ml-2">Incrível! Quanto tempo demorou?</span>
-                  </div>
-                </div>
-
-                {/* Horário */}
-                <div className="text-xs text-gray-500">HÁ 3 DIAS</div>
-              </div>
-            </div>
-
-            {/* Post 2 - Com Vídeo */}
-            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              {/* Header do Post */}
-              <div className="flex items-center p-3 border-b border-gray-100">
-                <img 
-                  src="/ig2.png" 
-                  alt="Avatar Carlos" 
-                  className="w-8 h-8 rounded-full object-cover"
-                />
-                <div className="ml-3 flex-1">
-                  <div className="font-semibold text-sm text-gray-900">ana_paula</div>
-                  <div className="text-xs text-gray-500">Curitiba, PR</div>
-                </div>
-                <button className="text-gray-400 hover:text-gray-600">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                  </svg>
-                </button>
-              </div>
-
-              {/* Conteúdo do Vídeo */}
-              <div className="relative">
-                <iframe 
-                  src="https://player.vimeo.com/video/1112916686?h=64c0c0c0c0&autoplay=0&loop=0&title=0&byline=0&portrait=0" 
-                  className="w-full h-64"
-                  frameBorder="0" 
-                  allow="autoplay; fullscreen; picture-in-picture" 
-                  allowFullScreen
-                  title="Vídeo Carlos Lima - Treino"
-                ></iframe>
-              </div>
-
-              {/* Ações */}
-              <div className="p-3">
-                <div className="flex items-center space-x-4 mb-3">
-                  <button className="text-gray-600 hover:text-red-500 transition-colors">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                  </button>
-                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                    </svg>
-                  </button>
-                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
-                    </svg>
-                  </button>
-                  <div className="ml-auto">
-                    <button className="text-gray-600 hover:text-gray-800 transition-colors">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-
-                {/* Likes */}
-                <div className="text-sm font-semibold text-gray-900 mb-2">Curtido por <span className="text-blue-600">maria_silva</span> e <span className="text-blue-600">outras 89 pessoas</span></div>
-
-                {/* Caption */}
-                <div className="text-sm text-gray-900 mb-2">
-                  <span className="font-semibold">ana_paula</span> Treino pesado hoje! 💪 
-                  <br />Com Phynamax controlando o apetite, fica mais fácil manter o foco! 
-                  <br />#treino #foco #phynamax #academia
-                </div>
-
-                {/* Comentários */}
-                <div className="space-y-2 mb-3">
-                  <div className="text-sm">
-                    <span className="font-semibold text-gray-900">joao_fitness</span>
-                    <span className="text-gray-700 ml-2">Boa! Está funcionando mesmo! 🔥</span>
-                  </div>
-                </div>
-
-                {/* Horário */}
-                <div className="text-xs text-gray-500">HÁ 1 SEMANA</div>
-              </div>
-            </div>
-
-            {/* Post 3 - Com Foto */}
-            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              {/* Header do Post */}
-              <div className="flex items-center p-3 border-b border-gray-100">
-                <img 
-                  src="/ig3.png" 
-                  alt="Avatar Julia" 
-                  className="w-8 h-8 rounded-full object-cover"
-                />
-                <div className="ml-3 flex-1">
-                  <div className="font-semibold text-sm text-gray-900">julia_costa</div>
-                  <div className="text-xs text-gray-500">Belo Horizonte, MG</div>
-                </div>
-                <button className="text-gray-400 hover:text-gray-600">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                  </svg>
-                </button>
-              </div>
-
-              {/* Conteúdo da Imagem */}
-              <div className="relative cursor-pointer group" onClick={() => openImageModal('/im-3-dep.png')}>
-                <img 
-                  src="/im-3-dep.png" 
-                  alt="Resultado Phynamax" 
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                {/* Overlay com texto */}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
-                  <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
-                    <div className="bg-black/70 px-3 py-2 rounded-lg">
-                      <span className="text-sm font-semibold">Clique para ampliar</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Ações */}
-              <div className="p-3">
-                <div className="flex items-center space-x-4 mb-3">
-                  <button className="text-red-500">
-                    <svg className="w-6 h-6" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                  </button>
-                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                    </svg>
-                  </button>
-                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
-                    </svg>
-                  </button>
-                  <div className="ml-auto">
-                    <button className="text-gray-600 hover:text-gray-800 transition-colors">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-
-                {/* Likes */}
-                <div className="text-sm font-semibold text-gray-900 mb-2">Curtido por <span className="text-blue-600">carlos_lima</span> e <span className="text-blue-600">outras 203 pessoas</span></div>
-
-                {/* Caption */}
-                <div className="text-sm text-gray-900 mb-2">
-                  <span className="font-semibold">julia_costa</span> Antes e depois! 😍 
-                  <br />Phynamax mudou minha vida! Perdi 22kg em 4 meses! 
-                  <br />#antesedepois #phynamax #transformacao #feliz
-                </div>
-
-                {/* Comentários */}
-                <div className="space-y-2 mb-3">
-                  <div className="text-sm">
-                    <span className="font-semibold text-gray-900">ana_maria</span>
-                    <span className="text-gray-700 ml-2">Que transformação incrível! 👏</span>
-                  </div>
-                  <div className="text-sm">
-                    <span className="font-semibold text-gray-900">pedro_emagreceu</span>
-                    <span className="text-gray-700 ml-2">Parabéns! Estou no mesmo caminho! 💪</span>
-                  </div>
-                </div>
-
-                {/* Horário */}
-                <div className="text-xs text-gray-500">HÁ 2 SEMANAS</div>
-              </div>
-            </div>
-
-            {/* Post 4 - Com Vídeo */}
-            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              {/* Header do Post */}
-              <div className="flex items-center p-3 border-b border-gray-100">
-                <img 
-                  src="/ig4.png" 
-                  alt="Avatar Roberto" 
-                  className="w-8 h-8 rounded-full object-cover"
-                />
-                <div className="ml-3 flex-1">
-                  <div className="font-semibold text-sm text-gray-900">ana_silva</div>
-                  <div className="text-xs text-gray-500">Salvador, BA</div>
-                </div>
-                <button className="text-gray-400 hover:text-gray-600">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                  </svg>
-                </button>
-              </div>
-
-              {/* Conteúdo do Vídeo */}
-              <div className="relative">
-                <iframe 
-                  src="https://player.vimeo.com/video/1104572615?h=64c0c0c0c0&autoplay=0&loop=0&title=0&byline=0&portrait=0" 
-                  className="w-full h-64"
-                  frameBorder="0" 
-                  allow="autoplay; fullscreen; picture-in-picture" 
-                  allowFullScreen
-                  title="Vídeo Roberto Silva - Corrida"
-                ></iframe>
-              </div>
-
-              {/* Ações */}
-              <div className="p-3">
-                <div className="flex items-center space-x-4 mb-3">
-                  <button className="text-gray-600 hover:text-red-500 transition-colors">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                  </button>
-                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 20">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                    </svg>
-                  </button>
-                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
-                    </svg>
-                  </button>
-                  <div className="ml-auto">
-                    <button className="text-gray-600 hover:text-gray-800 transition-colors">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-
-                {/* Likes */}
-                <div className="text-sm font-semibold text-gray-900 mb-2">Curtido por <span className="text-blue-600">julia_costa</span> e <span className="text-blue-600">outras 156 pessoas</span></div>
-
-                {/* Caption */}
-                <div className="text-sm text-gray-900 mb-2">
-                  <span className="font-semibold">ana_silva</span> Corrida matinal! 🏃‍♂️ 
-                  <br />Com Phynamax controlando a fome, consigo treinar melhor! 
-                  <br />#corrida #manha #phynamax #energia
-                </div>
-
-                {/* Comentários */}
-                <div className="space-y-2 mb-3">
-                  <div className="text-sm">
-                    <span className="font-semibold text-gray-900">maria_atleta</span>
-                    <span className="text-gray-700 ml-2">Boa! Está funcionando mesmo! 💪</span>
-                  </div>
-                </div>
-
-                {/* Horário */}
-                <div className="text-xs text-gray-500">HÁ 2 MESES</div>
-              </div>
-            </div>
-
-            {/* Post 5 - Com Foto */}
-            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              {/* Header do Post */}
-              <div className="flex items-center p-3 border-b border-gray-100">
-                <img 
-                  src="/ig5.png" 
-                  alt="Avatar Amanda" 
-                  className="w-8 h-8 rounded-full object-cover"
-                />
-                <div className="ml-3 flex-1">
-                  <div className="font-semibold text-sm text-gray-900">roberto_queiroz</div>
-                  <div className="text-xs text-gray-500">Porto Alegre, RS</div>
-                </div>
-                <button className="text-gray-400 hover:text-gray-600">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                  </svg>
-                </button>
-              </div>
-
-              {/* Conteúdo da Imagem */}
-              <div className="relative cursor-pointer group" onClick={() => openImageModal('/im-5-dep.png')}>
-                <img 
-                  src="/im-5-dep.png" 
-                  alt="Resultado Phynamax" 
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                {/* Overlay com texto */}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
-                  <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
-                    <div className="bg-black/70 px-3 py-2 rounded-lg">
-                      <span className="text-sm font-semibold">Clique para ampliar</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Ações */}
-              <div className="p-3">
-                <div className="flex items-center space-x-4 mb-3">
-                  <button className="text-gray-600 hover:text-red-500 transition-colors">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                  </button>
-                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                    </svg>
-                  </button>
-                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
-                    </svg>
-                  </button>
-                  <div className="ml-auto">
-                    <button className="text-gray-600 hover:text-gray-800 transition-colors">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-
-                {/* Likes */}
-                <div className="text-sm font-semibold text-gray-900 mb-2">Curtido por <span className="text-blue-600">roberto_silva</span> e <span className="text-blue-600">outras 98 pessoas</span></div>
-
-                {/* Caption */}
-                <div className="text-sm text-gray-900 mb-2">
-                  <span className="font-semibold">roberto_queiroz</span> Almoço saudável! 🥗 
-                  <br />Phynamax me ajudou a controlar a compulsão por doces! 
-                  <br />#alimentacaosaudavel #phynamax #controle #foco
-                </div>
-
-                {/* Comentários */}
-                <div className="space-y-2 mb-3">
-                  <div className="text-sm">
-                    <span className="font-semibold text-gray-900">carla_nutri</span>
-                    <span className="text-gray-700 ml-2">Que prato lindo! 👏</span>
-                  </div>
-                </div>
-
-                {/* Horário */}
-                <div className="text-xs text-gray-500">HÁ 2 MESES</div>
-              </div>
-            </div>
-
-            {/* Post 6 - Com Vídeo */}
-            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              {/* Header do Post */}
-              <div className="flex items-center p-3 border-b border-gray-100">
-                <img 
-                  src="/ig6.png" 
-                  alt="Avatar Lucas" 
-                  className="w-8 h-8 rounded-full object-cover"
-                />
-                <div className="ml-3 flex-1">
-                  <div className="font-semibold text-sm text-gray-900">luana_pereira</div>
-                  <div className="text-xs text-gray-500">Recife, PE</div>
-                </div>
-                <button className="text-gray-400 hover:text-gray-600">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                  </svg>
-                </button>
-              </div>
-
-              {/* Conteúdo da Imagem */}
-              <div className="relative cursor-pointer group" onClick={() => openImageModal('/im-6-dep.png')}>
-                <img 
-                  src="/im-6-dep.png" 
-                  alt="Resultado Phynamax" 
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                {/* Overlay com texto */}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
-                  <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
-                    <div className="bg-black/70 px-3 py-2 rounded-lg">
-                      <span className="text-sm font-semibold">Clique para ampliar</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Ações */}
-              <div className="p-3">
-                <div className="flex items-center space-x-4 mb-3">
-                  <button className="text-gray-600 hover:text-red-500 transition-colors">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                  </button>
-                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                    </svg>
-                  </button>
-                  <button className="text-gray-600 hover:text-gray-800 transition-colors">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
-                    </svg>
-                  </button>
-                  <div className="ml-auto">
-                    <button className="text-gray-600 hover:text-gray-800 transition-colors">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-
-                {/* Likes */}
-                <div className="text-sm font-semibold text-gray-900 mb-2">Curtido por <span className="text-blue-600">amanda_pereira</span> e <span className="text-blue-600">outras 134 pessoas</span></div>
-
-                {/* Caption */}
-                <div className="text-sm text-gray-900 mb-2">
-                  <span className="font-semibold">luana_pereira</span> Domingo na praia! 🏖️ 
-                  <br />Com Phynamax controlando o apetite, aproveito melhor! 
-                  <br />#praia #domingo #phynamax #vida
-                </div>
-
-                {/* Comentários */}
-                <div className="space-y-2 mb-3">
-                  <div className="text-sm">
-                    <span className="font-semibold text-gray-900">maria_praia</span>
-                    <span className="text-gray-700 ml-2">Que lugar lindo! 😍</span>
-                  </div>
-                </div>
-
-                {/* Horário */}
-                <div className="text-xs text-gray-500">HÁ 3 MESES</div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        {/* CTA Centralizado */}
-        <div className="text-center mt-12">
-          <button 
-            onClick={scrollToKits}
-            className="w-full lg:w-auto bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold py-3 px-6 rounded-xl text-sm lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-          >
-            <div className="text-center">
-              <div className="text-base lg:text-xl">SIM, QUERO EXPERIMENTAR AGORA</div>
-              <div className="text-xs lg:text-sm font-normal opacity-90 mt-1">
-                CLIQUE AQUI E GARANTA SEU KIT COM DESCONTO
-              </div>
-            </div>
-          </button>
-        </div>
-      </section>
 
       {/* Modal de Imagem */}
       {selectedImage && (
