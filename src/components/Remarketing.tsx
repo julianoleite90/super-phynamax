@@ -479,6 +479,7 @@ const Remarketing = () => {
                 <div className="space-y-2 mb-6 mt-6 lg:space-y-3 lg:mb-8 lg:mt-8">
                   <p className="text-gray-800 text-xl lg:text-2xl">em 12x de <span className="text-green-600 font-bold text-2xl lg:text-3xl">R$52,00</span></p>
                   <p className="text-gray-800 text-sm lg:text-base">à vista <span className="font-semibold text-gray-800">R$ 529,00</span></p>
+                  <p className="text-green-600 text-sm lg:text-base font-semibold">PIX: 15% de desconto adicional!</p>
                 </div>
                 <button 
                   onClick={() => setShowKit8Popup(true)}
@@ -511,6 +512,7 @@ const Remarketing = () => {
                 <div className="space-y-2 mb-6 mt-6 lg:space-y-3 lg:mb-8 lg:mt-8">
                   <p className="text-xl lg:text-2xl">em 12x de <span className="text-green-600 font-bold text-2xl lg:text-3xl">R$44,08</span></p>
                   <p className="text-gray-800 text-sm lg:text-base">à vista <span className="font-semibold text-gray-800">R$ 439,00</span></p>
+                  <p className="text-green-600 text-sm lg:text-base font-semibold">PIX: 15% de desconto adicional!</p>
                 </div>
                 <a href="https://full.sale/8mYNoQ?src=rmkt" target="_blank" rel="noopener noreferrer nofollow" className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 lg:py-5 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 text-lg lg:text-xl inline-block text-center">
                   Comprar Agora »
@@ -540,6 +542,7 @@ const Remarketing = () => {
                 <div className="space-y-2 mb-6 mt-6 lg:space-y-3 lg:mb-8 lg:mt-8">
                   <p className="text-gray-800 text-xl lg:text-2xl">em 12x de <span className="text-green-600 font-bold text-2xl lg:text-3xl">R$32,03</span></p>
                   <p className="text-gray-800 text-sm lg:text-base">à vista <span className="font-semibold text-gray-800">R$ 319,00</span></p>
+                  <p className="text-green-600 text-sm lg:text-base font-semibold">PIX: 15% de desconto adicional!</p>
                 </div>
                 <a href="https://full.sale/k0E9wK?src=rmkt" target="_blank" rel="noopener noreferrer nofollow" className="w-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold py-4 lg:py-5 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 text-lg lg:text-xl inline-block text-center">
                   Comprar Agora »
@@ -569,6 +572,7 @@ const Remarketing = () => {
                 <div className="space-y-2 mb-6 mt-6 lg:space-y-3 lg:mb-8 lg:mt-8">
                   <p className="text-gray-800 text-xl lg:text-2xl">em 12x de<br /><span className="text-green-600 font-bold text-2xl lg:text-3xl">R$18,98</span></p>
                   <p className="text-gray-800 text-sm lg:text-base">à vista <span className="font-semibold text-gray-800">R$ 189,00</span></p>
+                  <p className="text-green-600 text-sm lg:text-base font-semibold">PIX: 15% de desconto adicional!</p>
                 </div>
                 <a href="https://full.sale/eANTht?src=rmkt" target="_blank" rel="noopener noreferrer nofollow" className="w-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold py-4 lg:py-5 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 text-lg lg:text-xl inline-block text-center">
                   Comprar Agora »
@@ -612,9 +616,9 @@ const Remarketing = () => {
                 </p>
                 {/* CTA Button - Desktop Only */}
                 <div className="hidden lg:block">
-                  <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl">
+                  <a href="https://produto.mercadolivre.com.br/MLB-3985586341-phynamax-funciona-5-frascos-_JM#polycard_client=recommendations_vip-seller_items-above&reco_backend=ranker-retsys-same-seller&reco_model=rk_entity_sameseller&reco_client=vip-seller_items-above&reco_item_pos=1&reco_backend_type=low_level&reco_id=66b9e745-9f26-4da3-b223-a9e69e99b705" target="_blank" rel="noopener noreferrer nofollow" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl inline-block">
                     Comprar no Mercado Livre »
-                  </button>
+                  </a>
                 </div>
               </div>
               
@@ -627,9 +631,9 @@ const Remarketing = () => {
                   style={{width: '400px', height: '400px'}}
                 />
                 {/* CTA Button - Visible on Mobile, Hidden on Desktop */}
-                <button className="lg:hidden bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl mt-28">
+                <a href="https://produto.mercadolivre.com.br/MLB-3985586341-phynamax-funciona-5-frascos-_JM#polycard_client=recommendations_vip-seller_items-above&reco_backend=ranker-retsys-same-seller&reco_model=rk_entity_sameseller&reco_client=vip-seller_items-above&reco_item_pos=1&reco_backend_type=low_level&reco_id=66b9e745-9f26-4da3-b223-a9e69e99b705" target="_blank" rel="noopener noreferrer nofollow" className="lg:hidden bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl mt-28 inline-block">
                   Comprar no Mercado Livre »
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -652,7 +656,7 @@ const Remarketing = () => {
 
             {/* Main Title */}
             <div className="text-center">
-              <h2 className="text-xl sm:text-2xl font-extrabold tracking-wide text-gray-900">
+              <h2 className="text-xl sm:text-2xl font-extrabold tracking-wide text-green-600">
                 <span>COMPRA 100% SEGURA - ENTREGA GARANTIDA</span>
               </h2>
             </div>
@@ -662,7 +666,7 @@ const Remarketing = () => {
               {/* Site Confiável */}
               <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
                 <div className="flex items-start space-x-3">
-                  <div className="w-14 h-14 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <img src="/ico-seguro.png" alt="Site Confiável" className="w-7 h-7" />
                   </div>
                   <div>
@@ -675,7 +679,7 @@ const Remarketing = () => {
               {/* Entrega Garantida */}
               <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
                 <div className="flex items-start space-x-3">
-                  <div className="w-14 h-14 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <img src="/ico-frete.png" alt="Entrega Garantida" className="w-7 h-7" />
                   </div>
                   <div>
@@ -688,7 +692,7 @@ const Remarketing = () => {
               {/* Dados Financeiros */}
               <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
                 <div className="flex items-start space-x-3">
-                  <div className="w-14 h-14 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <img src="/ico-dados.png" alt="Dados Financeiros" className="w-7 h-7" />
                   </div>
                   <div>
@@ -701,7 +705,7 @@ const Remarketing = () => {
               {/* Dados Pessoais */}
               <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
                 <div className="flex items-start space-x-3">
-                  <div className="w-14 h-14 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <img src="/ico-cadeado.png" alt="Dados Pessoais" className="w-7 h-7" />
                   </div>
                   <div>
@@ -715,7 +719,7 @@ const Remarketing = () => {
             {/* Guarantee Text */}
             <div className="text-center">
               <p className="text-gray-700 text-lg leading-relaxed">
-                Experimente Phynamax com total tranquilidade! Oferecemos <span className="text-pink-600 font-bold">garantia de satisfação de 30 dias</span> - se não ficar completamente satisfeito, devolvemos 100% do valor pago, sem complicações.
+                Experimente Phynamax com total tranquilidade! Oferecemos <span className="text-black font-bold">garantia de satisfação de 30 dias</span> - se não ficar completamente satisfeito, devolvemos 100% do valor pago, sem complicações.
               </p>
             </div>
 
@@ -760,9 +764,9 @@ const Remarketing = () => {
                 {/* Site Confiável */}
                 <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
                   <div className="flex items-start space-x-3">
-                    <div className="w-14 h-14 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <img src="/ico-seguro.png" alt="Site Confiável" className="w-7 h-7" />
-                    </div>
+                                      <div className="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <img src="/ico-seguro.png" alt="Site Confiável" className="w-7 h-7" />
+                  </div>
                     <div>
                       <h3 className="font-bold text-gray-900 text-base">Site Confiável</h3>
                       <p className="text-gray-600 text-sm">Monitorado todo o tempo por empresas de segurança digital.</p>
@@ -773,9 +777,9 @@ const Remarketing = () => {
                 {/* Entrega Garantida */}
                 <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
                   <div className="flex items-start space-x-3">
-                    <div className="w-14 h-14 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <img src="/ico-frete.png" alt="Entrega Garantida" className="w-7 h-7" />
-                    </div>
+                                      <div className="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <img src="/ico-frete.png" alt="Entrega Garantida" className="w-7 h-7" />
+                  </div>
                     <div>
                       <h3 className="font-bold text-gray-900 text-base">Entrega Garantida</h3>
                       <p className="text-gray-600 text-sm">Logística eficaz com entregas feitas no prazo combinado.</p>
@@ -786,9 +790,9 @@ const Remarketing = () => {
                 {/* Dados Financeiros */}
                 <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
                   <div className="flex items-start space-x-3">
-                    <div className="w-14 h-14 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <img src="/ico-dados.png" alt="Dados Financeiros" className="w-7 h-7" />
-                    </div>
+                                      <div className="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <img src="/ico-dados.png" alt="Dados Financeiros" className="w-7 h-7" />
+                  </div>
                     <div>
                       <h3 className="font-bold text-gray-900 text-base">Dados Financeiros</h3>
                       <p className="text-gray-600 text-sm">Gravados em ambiente 100% seguro.</p>
@@ -799,9 +803,9 @@ const Remarketing = () => {
                 {/* Dados Pessoais */}
                 <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
                   <div className="flex items-start space-x-3">
-                    <div className="w-14 h-14 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <img src="/ico-cadeado.png" alt="Dados Pessoais" className="w-7 h-7" />
-                    </div>
+                                      <div className="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <img src="/ico-cadeado.png" alt="Dados Pessoais" className="w-7 h-7" />
+                  </div>
                     <div>
                       <h3 className="font-bold text-gray-900 text-base">Dados Pessoais</h3>
                       <p className="text-gray-600 text-sm">São totalmente sigilosos e não são compartilhados.</p>
@@ -813,7 +817,7 @@ const Remarketing = () => {
               {/* Guarantee Text */}
               <div className="text-left">
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  Experimente Phynamax com total tranquilidade! Oferecemos <span className="text-pink-600 font-bold">garantia de satisfação de 30 dias</span> - se não ficar completamente satisfeito, devolvemos 100% do valor pago, sem complicações.
+                  Experimente Phynamax com total tranquilidade! Oferecemos <span className="text-black font-bold">garantia de satisfação de 30 dias</span> - se não ficar completamente satisfeito, devolvemos 100% do valor pago, sem complicações.
                 </p>
               </div>
 
