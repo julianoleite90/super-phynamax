@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HeroSection from './components/HeroSection';
 import TermosGarantia from './components/TermosGarantia';
 import Remarketing from './components/Remarketing';
+import PhynamaxFunciona from './components/PhynamaxFunciona';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<HeroSection />} />
           <Route path="/termos-garantia" element={<TermosGarantia />} />
           <Route path="/remarketing" element={<Remarketing />} />
+          <Route path="/phynamax-funciona" element={<PhynamaxFunciona />} />
         </Routes>
       </div>
     </Router>
