@@ -1207,7 +1207,7 @@ const HeroSection = () => {
 
             {/* Main Title */}
             <div className="text-center">
-              <h2 className="text-xl sm:text-2xl font-extrabold tracking-wide text-green-600">
+              <h2 className="text-xl sm:text-2xl font-extrabold tracking-wide text-black sm:text-green-600">
                 <span>COMPRA 100% SEGURA - ENTREGA GARANTIDA</span>
               </h2>
             </div>
