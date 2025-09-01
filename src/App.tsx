@@ -13,7 +13,7 @@ function App() {
           <Route path="/" element={<HeroSection />} />
           <Route path="/termos-garantia" element={<TermosGarantia />} />
           <Route path="/remarketing" element={<Remarketing />} />
-          <Route path="/phynamax-funciona" element={<PhynamaxFunciona />} />
+          <Route path="/funciona" element={<PhynamaxFunciona />} />
         </Routes>
       </div>
     </Router>
