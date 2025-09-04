@@ -192,7 +192,7 @@ const Remarketing = () => {
       <section className="bg-pink-600 py-8 px-4 sm:px-6 lg:px-8">
         <div className="container-custom text-center">
           <p className="text-white text-xl sm:text-2xl lg:text-3xl font-bold tracking-wide">
-            GARANTIMOS 30 DIAS INCRÍVEIS, SEM EFEITOS COLATERAIS, OU VOCÊ NÃO PAGA NADA!
+            GARANTIMOS 30 DIAS INCRÍVEIS, SE VOCÊ NÃO TIVER RESULTADOS, DEVOLVEMOS O SEU DINHEIRO!
           </p>
         </div>
       </section>
@@ -458,10 +458,10 @@ const Remarketing = () => {
       {/* Kits Section */}
       <section className="bg-white py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="container-custom">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-6 lg:gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-6 lg:gap-8 justify-items-center">
             
             {/* Kit 8 Potes */}
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200">
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 hidden">
               <div className="p-4 lg:p-8 text-center">
                 <div className="relative mb-0">
                   <img src="/5f.png" alt="Kit 8 Potes" className="w-[17rem] h-[17rem] md:w-80 md:h-80 lg:w-[32rem] lg:h-[32rem] mx-auto object-contain -mt-20 md:-mt-36 lg:-mt-56" />
@@ -477,7 +477,7 @@ const Remarketing = () => {
                 </div>
                 
                 <div className="space-y-2 mb-6 mt-6 lg:space-y-3 lg:mb-8 lg:mt-8">
-                  <p className="text-gray-800 text-xl lg:text-2xl">em 12x de <span className="text-green-600 font-bold text-2xl lg:text-3xl">R$52,00</span></p>
+                  <p className="text-gray-800 text-xl lg:text-2xl">em 12x de<br /><span className="text-green-600 font-bold text-2xl lg:text-3xl">R$52,00</span></p>
                   <p className="text-gray-800 text-sm lg:text-base">à vista <span className="font-semibold text-gray-800">R$ 529,00</span></p>
                   <p className="text-green-600 text-sm lg:text-base font-semibold">PIX: 15% de desconto adicional!</p>
                 </div>
@@ -510,7 +510,7 @@ const Remarketing = () => {
                 </div>
                 
                 <div className="space-y-2 mb-6 mt-6 lg:space-y-3 lg:mb-8 lg:mt-8">
-                  <p className="text-xl lg:text-2xl">em 12x de <span className="text-green-600 font-bold text-2xl lg:text-3xl">R$44,08</span></p>
+                  <p className="text-xl lg:text-2xl">em 12x de<br /><span className="text-green-600 font-bold text-2xl lg:text-3xl">R$44,08</span></p>
                   <p className="text-gray-800 text-sm lg:text-base">à vista <span className="font-semibold text-gray-800">R$ 439,00</span></p>
                   <p className="text-green-600 text-sm lg:text-base font-semibold">PIX: 15% de desconto adicional!</p>
                 </div>
@@ -540,7 +540,7 @@ const Remarketing = () => {
                 </div>
                 
                 <div className="space-y-2 mb-6 mt-6 lg:space-y-3 lg:mb-8 lg:mt-8">
-                  <p className="text-gray-800 text-xl lg:text-2xl">em 12x de <span className="text-green-600 font-bold text-2xl lg:text-3xl">R$32,03</span></p>
+                  <p className="text-gray-800 text-xl lg:text-2xl">em 12x de<br /><span className="text-green-600 font-bold text-2xl lg:text-3xl">R$32,03</span></p>
                   <p className="text-gray-800 text-sm lg:text-base">à vista <span className="font-semibold text-gray-800">R$ 319,00</span></p>
                   <p className="text-green-600 text-sm lg:text-base font-semibold">PIX: 15% de desconto adicional!</p>
                 </div>

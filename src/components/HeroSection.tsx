@@ -69,6 +69,7 @@ const HeroSection = () => {
 
     return () => clearInterval(interval);
   }, []);
+
   return (
     <section className="min-h-screen bg-white">
       {/* Header Section */}
@@ -86,6 +87,7 @@ const HeroSection = () => {
                   </a>
         </div>
       </header>
+
 
       {/* Main Content */}
       <div className="px-4 sm:px-6 lg:px-8">
@@ -264,23 +266,21 @@ const HeroSection = () => {
       {/* ANVISA Approval Section */}
       <section className="bg-white py-12 px-4 sm:px-6 lg:px-8 pb-0">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 items-center">
             {/* Left Side - Text */}
             <div className="text-left">
               <p className="text-gray-800 text-lg leading-relaxed">
-                A fórmula do <strong className="font-bold">Phynamax</strong> é aprovada pelos orgãos regulatórios do Brasil, dentro dos termos da RDC 240 DE 26/07/2018, sendo dispensado de registro, pois é avaliado como 100% seguro para o consumo da população por este órgão.
+                Fórmula natural com 6 bioativos específicos para perda de peso, o <strong className="font-bold">Phynamax</strong> é regulamentado conforme a RDC 240/07/2018, sendo dispensado de registro por ser avaliado como 100% seguro para consumo pela população. Não apresenta contraindicações, exceto para pessoas com alergia a crustáceos.
               </p>
             </div>
             
             {/* Right Side - ANVISA Logo */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="text-center">
-                <img 
-                  src="/adra.png" 
-                  alt="ANVISA Logo" 
-                  className="w-72 h-72 lg:w-96 lg:h-96 mx-auto lg:mx-0 object-contain"
-                />
-              </div>
+            <div className="w-full flex justify-center lg:justify-end lg:w-auto lg:pr-8">
+              <img 
+                src="/adra.png" 
+                alt="ANVISA Logo" 
+                className="w-96 h-96 lg:w-[28rem] lg:h-[28rem] object-contain ml-8 lg:ml-0"
+              />
             </div>
           </div>
         </div>
@@ -290,7 +290,7 @@ const HeroSection = () => {
       <section className="bg-pink-600 py-8 px-4 sm:px-6 lg:px-8">
         <div className="container-custom text-center">
           <p className="text-white text-xl sm:text-2xl lg:text-3xl font-bold tracking-wide">
-            GARANTIMOS 30 DIAS INCRÍVEIS, SEM EFEITOS COLATERAIS, OU VOCÊ NÃO PAGA NADA!
+            GARANTIMOS 30 DIAS INCRÍVEIS, SE VOCÊ NÃO TIVER RESULTADOS, DEVOLVEMOS O SEU DINHEIRO!
           </p>
         </div>
       </section>
@@ -471,10 +471,10 @@ const HeroSection = () => {
       {/* Kits Section */}
       <section className="bg-white py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="container-custom">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-6 lg:gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-6 lg:gap-8 justify-items-center">
             
             {/* Kit 8 Potes */}
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200">
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 hidden">
               <div className="p-4 lg:p-8 text-center">
                 <div className="relative mb-0">
                   <img src="/5f.png" alt="Kit 8 Potes" className="w-[17rem] h-[17rem] md:w-80 md:h-80 lg:w-[32rem] lg:h-[32rem] mx-auto object-contain -mt-20 md:-mt-36 lg:-mt-56" />
@@ -490,7 +490,7 @@ const HeroSection = () => {
                 </div>
                 
                 <div className="space-y-2 mb-6 mt-6 lg:space-y-3 lg:mb-8 lg:mt-8">
-                  <p className="text-gray-800 text-xl lg:text-2xl">em 12x de <span className="text-green-600 font-bold text-2xl lg:text-3xl">R$52,00</span></p>
+                  <p className="text-gray-800 text-xl lg:text-2xl">em 12x de<br /><span className="text-green-600 font-bold text-2xl lg:text-3xl">R$52,00</span></p>
                   <p className="text-gray-800 text-sm lg:text-base">à vista <span className="font-semibold text-gray-800">R$ 529,00</span></p>
                   <p className="text-green-600 text-sm lg:text-base font-semibold">PIX: 15% de desconto adicional!</p>
                 </div>
@@ -523,7 +523,7 @@ const HeroSection = () => {
                 </div>
                 
                 <div className="space-y-2 mb-6 mt-6 lg:space-y-3 lg:mb-8 lg:mt-8">
-                  <p className="text-xl lg:text-2xl">em 12x de <span className="text-green-600 font-bold text-2xl lg:text-3xl">R$44,08</span></p>
+                  <p className="text-xl lg:text-2xl">em 12x de<br /><span className="text-green-600 font-bold text-2xl lg:text-3xl">R$44,08</span></p>
                   <p className="text-gray-800 text-sm lg:text-base">à vista <span className="font-semibold text-gray-800">R$ 439,00</span></p>
                   <p className="text-green-600 text-sm lg:text-base font-semibold">PIX: 15% de desconto adicional!</p>
                 </div>
@@ -553,7 +553,7 @@ const HeroSection = () => {
                 </div>
                 
                 <div className="space-y-2 mb-6 mt-6 lg:space-y-3 lg:mb-8 lg:mt-8">
-                  <p className="text-gray-800 text-xl lg:text-2xl">em 12x de <span className="text-green-600 font-bold text-2xl lg:text-3xl">R$32,03</span></p>
+                  <p className="text-gray-800 text-xl lg:text-2xl">em 12x de<br /><span className="text-green-600 font-bold text-2xl lg:text-3xl">R$32,03</span></p>
                   <p className="text-gray-800 text-sm lg:text-base">à vista <span className="font-semibold text-gray-800">R$ 319,00</span></p>
                   <p className="text-green-600 text-sm lg:text-base font-semibold">PIX: 15% de desconto adicional!</p>
                 </div>
@@ -654,7 +654,7 @@ const HeroSection = () => {
       </section>
 
       {/* Comentários Recentes Section */}
-      <section className="bg-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+      <section className="bg-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 hidden">
         <div className="container-custom text-center">
           <p className="text-black text-2xl sm:text-3xl lg:text-4xl font-bold tracking-wide underline mb-8 sm:mb-10 lg:mb-12">
             COMENTÁRIOS RECENTES
@@ -672,7 +672,7 @@ const HeroSection = () => {
       </section>
 
       {/* Instagram Feed Section */}
-      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 hidden">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             
@@ -1216,19 +1216,10 @@ const HeroSection = () => {
       </section>
 
       {/* Compra Segura Section */}
-      <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-gray-50 pt-16 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="container-custom">
-          {/* Mobile Layout: Image first, then title and content */}
-          <div className="lg:hidden space-y-8">
-            {/* Image - Above title on mobile */}
-            <div className="flex justify-center">
-              <img 
-                src="/correio-frete.png" 
-                alt="Correio Frete - Compra Segura" 
-                className="w-full max-w-md h-auto object-contain"
-              />
-            </div>
-
+          {/* Mobile Layout: Content first, then image */}
+          <div className="lg:hidden space-y-8 pb-8">
             {/* Main Title */}
             <div className="text-center">
               <h2 className="text-xl sm:text-2xl font-extrabold tracking-wide text-black sm:text-green-600">
@@ -1298,35 +1289,49 @@ const HeroSection = () => {
               </p>
             </div>
 
-            {/* CTA Button */}
-            <div className="text-center">
-              <button 
-                onClick={scrollToKits}
-                className="w-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold py-3 px-6 rounded-xl text-sm lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                <div className="text-center">
-                  <div className="text-base lg:text-xl">SIM, EU QUERO EMAGRECER!</div>
-                  <div className="text-xs lg:text-sm font-normal opacity-90 mt-1">
-                    CLIQUE AQUI E GARANTA SEU KIT COM DESCONTO
+            {/* Image and CTA Container */}
+            <div className="relative mb-[-24rem]">
+              {/* Image - Below CTA on mobile, sticking to pink bar */}
+              <div className="flex justify-center items-center">
+                <img 
+                  src="/correio-frete.png" 
+                  alt="Correio Frete - Compra Segura" 
+                  className="w-full h-[26rem] object-contain object-bottom"
+                  style={{maxWidth: '550px', transform: 'translateY(6rem)'}}
+                />
+              </div>
+              
+              {/* CTA Button - Absolutely positioned over image */}
+              <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-20 w-full px-4">
+                <button 
+                  onClick={scrollToKits}
+                  className="w-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold py-3 px-6 rounded-xl text-sm lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                >
+                  <div className="text-center">
+                    <div className="text-base lg:text-xl">SIM, EU QUERO EMAGRECER!</div>
+                    <div className="text-xs lg:text-sm font-normal opacity-90 mt-1">
+                      CLIQUE AQUI E GARANTA SEU KIT COM DESCONTO
+                    </div>
                   </div>
-                </div>
-              </button>
+                </button>
+              </div>
             </div>
           </div>
 
           {/* Desktop Layout: Two columns - Image left, Content right */}
-          <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-start">
+          <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Image */}
-            <div className="flex justify-center">
+            <div className="flex justify-center items-end h-full mb-[-8rem]">
               <img 
                 src="/correio-frete.png" 
                 alt="Correio Frete - Compra Segura" 
-                className="w-full max-w-lg xl:max-w-xl h-auto object-contain mt-24"
+                className="w-full h-[36rem] object-contain object-bottom"
+                style={{maxWidth: '850px'}}
               />
             </div>
 
             {/* Right Column - Content */}
-            <div className="space-y-8">
+            <div className="space-y-8 mt-4">
               {/* Main Title */}
               <div className="text-left">
                 <h2 className="text-2xl lg:text-3xl font-extrabold tracking-wide text-gray-900">
