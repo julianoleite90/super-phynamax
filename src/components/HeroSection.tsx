@@ -9,6 +9,7 @@ const HeroSection = () => {
   const [showKit8Popup, setShowKit8Popup] = useState<boolean>(false);
   const [isRecording, setIsRecording] = useState<boolean>(true);
 
+
   const toggleFaq = (faqNumber: number) => {
     setOpenFaq(openFaq === faqNumber ? 0 : faqNumber);
   };
@@ -31,6 +32,7 @@ const HeroSection = () => {
       });
     }
   };
+
 
   const navigateCarousel = (direction: number) => {
     setCurrentSlide((prevSlide) => (prevSlide + direction + totalSlides) % totalSlides);
@@ -57,6 +59,7 @@ const HeroSection = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, [currentSlide]);
+
 
   // Animação do ponto vermelho piscando
   useEffect(() => {
@@ -89,29 +92,36 @@ const HeroSection = () => {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Left Side - Hero Image */}
-            <div className="relative flex items-end justify-center lg:justify-start pb-0 pt-8">
+            <div className="relative flex items-end justify-center lg:justify-start pb-0 pt-8 overflow-visible">
+              {/* Background Image */}
+              <img 
+                src="/back-hero.png" 
+                alt="Background Hero" 
+                className="absolute bottom-0 left-1/2 lg:left-[45%] xl:left-[40%] transform -translate-x-1/2 w-[200vw] lg:w-[150vw] xl:w-[120vw] h-auto object-contain z-0"
+              />
+              {/* Foreground Hero Image */}
               <img 
                 src="/a1hero.png" 
                 alt="Hero" 
-                className="w-full max-w-[280px] lg:max-w-[360px] xl:max-w-[430px] h-auto object-contain"
+                className="relative z-10 w-full max-w-[280px] lg:max-w-[360px] xl:max-w-[430px] h-auto object-contain"
               />
             </div>
 
             {/* Right Side - Text and CTA */}
                           <div className="text-center lg:text-left space-y-6 flex flex-col justify-start pt-0 sm:pt-0 md:pt-4 lg:pt-16">
               <h1 className="text-2xl sm:text-2xl lg:text-3xl xl:text-4xl font-normal text-gray-900 leading-tight">
-                <span className="font-black">PERCA PESO</span> DE <span>FORMA RÁPIDA</span><br />
-                E TENHA UMA <span className="font-black">VIDA MAIS SAUDÁVEL</span>
+                <span className="font-bold">PERCA PESO</span> DE <span className="text-pink-600 underline">FORMA RÁPIDA</span><br />
+                E TENHA MAIS <span className="font-bold">QUALIDADE DE VIDA</span>
               </h1>
               
               {/* Benefits List */}
               <div className="space-y-4 pt-2 sm:pt-0">
                 {[
-                  "REDUZ A ABSORÇÃO DO AÇUCAR",
-                  "AUMENTA A SACIEDADE",
-                  "CONTROLA O APETITE",
-                  "ELIMINA A GORDURA TEIMOSA",
-                  "AUXILIA O FUNCIONAMENTO METABÓLICO"
+                  "REDUZ OS NÍVEIS DE GORDURA CORPORAL",
+                  "AJUDA A ELIMINAR A GORDURA NO FÍGADO",
+                  "REGULA O APETITE E INTESTINO",
+                  "AJUDA A CONTROLAR ANSIEDADE",
+                  "DIMINUI A COMPULSIVIDADE POR DOCES"
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3 text-left">
                     <div className="w-5 h-5 bg-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -119,7 +129,7 @@ const HeroSection = () => {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <span className="text-base text-gray-800 leading-tight text-left">{benefit}</span>
+                    <span className="text-sm sm:text-base text-gray-800 leading-tight text-left">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -131,7 +141,7 @@ const HeroSection = () => {
                   className="w-full lg:w-auto bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold py-3 px-6 rounded-xl text-sm lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   <div className="text-center">
-                    <div className="text-base lg:text-xl">SIM, QUERO EXPERIMENTAR AGORA</div>
+                    <div className="text-base lg:text-xl">SIM, EU QUERO EMAGRECER!</div>
                     <div className="text-xs lg:text-sm font-normal opacity-90 mt-1">
                       CLIQUE AQUI E GARANTA SEU KIT COM DESCONTO
                     </div>
@@ -143,11 +153,110 @@ const HeroSection = () => {
         </div>
       </div>
 
+      {/* Third Pink Bar Section */}
+      <section className="bg-pink-600 py-8 px-4 sm:px-6 lg:px-8">
+        <div className="container-custom text-center">
+          <p className="text-white text-xl sm:text-2xl lg:text-3xl font-bold tracking-wide mb-4">
+            RESULTADOS REAIS
+          </p>
+          <p className="text-white text-lg sm:text-xl lg:text-2xl tracking-wide">
+            Veja as transformações incríveis de quem já experimentou o Phynamax
+          </p>
+        </div>
+      </section>
+
+      {/* Before and After Carousel Section */}
+      <section className="bg-white pt-4 lg:pt-2 pb-12 px-4 sm:px-6 lg:px-8">
+        <div className="container-custom">
+
+          {/* Carousel Container */}
+          <div className="relative max-w-6xl mx-auto mt-8 lg:-mt-12 mb-4 lg:mb-6">
+            {/* Carousel Track */}
+            <div className="flex overflow-hidden">
+              <div className="flex transition-transform duration-500 ease-in-out w-full" id="carousel-track">
+                {/* Before and After Images */}
+                {[
+                  { image: "/de-ana.png", name: "Ana Teixeira", age: "36 anos", weight: "-15kg", city: "Curitiba - PR", type: "image" },
+                  { videoId: "1115818116", name: "Ana Teixeira", age: "36 anos", weight: "-15kg", city: "Curitiba - PR", type: "video" },
+                  { image: "/11.png", name: "Luana", age: "26 anos", weight: "-15kg", city: "Brasília - DF", type: "image" },
+                  { videoId: "1115870579", name: "Luana", age: "26 anos", weight: "-15kg", city: "Brasília - DF", type: "video" },
+                  { image: "/13.png", name: "Bruno Rodrigues", age: "43 anos", weight: "-28kg", city: "Fortaleza - CE", type: "image" },
+                  { image: "/14.png", name: "Priscila Santos", age: "30 anos", weight: "-24kg", city: "Goiânia - GO", type: "image" },
+                  { image: "/10.png", name: "Isabela Lima", age: "29 anos", weight: "-16kg", city: "Florianópolis - SC", type: "image" },
+                  { image: "/12.png", name: "Juliana Mendes", age: "27 anos", weight: "-19kg", city: "Curitiba - PR", type: "image" },
+                  { image: "/15.png", name: "Rafaela Fernandes", age: "26 anos", weight: "-18kg", city: "Manaus - AM", type: "image" }
+                ].map((item, index) => (
+                  <div key={index} className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-2 md:px-2">
+                    {item.type === "video" ? (
+                      <div className="w-full h-80 sm:h-80 lg:h-[36rem] flex items-center justify-center">
+                        <iframe
+                          src={`https://player.vimeo.com/video/${item.videoId}?h=64c0c0c0c0&autoplay=0&loop=0&title=0&byline=0&portrait=0`}
+                          className="w-3/5 h-64 sm:h-72 lg:h-96 rounded-lg"
+                          frameBorder="0"
+                          allow="autoplay; fullscreen; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+                    ) : (
+                      <img 
+                        src={item.image} 
+                        alt={`Resultado ${index + 1}`}
+                        className="w-full h-80 sm:h-80 lg:h-[36rem] object-contain rounded-lg mx-auto"
+                      />
+                    )}
+                    <div className="text-center mt-3 lg:-mt-20">
+                      <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900 mb-1">
+                        {item.name} | {item.age} | {item.weight}
+                      </h3>
+                      <p className="text-xs sm:text-sm lg:text-base text-gray-600">
+                        {item.city}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Navigation Buttons */}
+            <button 
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pink-200/40 text-pink-700 p-2 rounded-full shadow-sm hover:bg-pink-300/60 transition-colors duration-200 z-10"
+              onClick={() => navigateCarousel(-1)}
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            
+            <button 
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink-200/40 text-pink-700 p-2 rounded-full shadow-sm hover:bg-pink-300/60 transition-colors duration-200 z-10"
+              onClick={() => navigateCarousel(1)}
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            {/* Dots Indicator */}
+            <div className="flex justify-center mt-8 space-x-2">
+              {[0, 1, 2, 3, 4, 5].map((dot) => (
+                <button
+                  key={dot}
+                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+                    dot === currentSlide ? 'bg-pink-600' : 'bg-gray-300'
+                  }`}
+                  onClick={() => goToSlide(dot)}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer Section */}
       <footer className="bg-pink-600 py-8 px-4 sm:px-6 lg:px-8">
         <div className="container-custom text-center">
           <p className="text-white text-xl sm:text-2xl lg:text-3xl font-bold tracking-wide">
-            RECOMENDADO POR ESPECIALISTAS E APROVADO PELA LEGISLAÇÃO
+            RECOMENDADO POR ESPECIALISTAS
           </p>
         </div>
       </footer>
@@ -224,7 +333,7 @@ const HeroSection = () => {
                     className="w-full lg:w-auto bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold py-3 px-6 rounded-xl text-sm lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     <div className="text-center">
-                      <div className="text-base lg:text-xl">SIM, QUERO EXPERIMENTAR AGORA</div>
+                      <div className="text-base lg:text-xl">SIM, EU QUERO EMAGRECER!</div>
                       <div className="text-xs lg:text-sm font-normal opacity-90 mt-1">
                         CLIQUE AQUI E GARANTA SEU KIT COM DESCONTO
                       </div>
@@ -237,91 +346,6 @@ const HeroSection = () => {
         </div>
       </section>
 
-
-
-      {/* Third Pink Bar Section */}
-      <section className="bg-pink-600 py-8 px-4 sm:px-6 lg:px-8">
-        <div className="container-custom text-center">
-          <p className="text-white text-xl sm:text-2xl lg:text-3xl font-bold tracking-wide mb-4">
-            RESULTADOS REAIS
-          </p>
-          <p className="text-white text-lg sm:text-xl lg:text-2xl tracking-wide">
-            Veja as transformações incríveis de quem já experimentou o Phynamax
-          </p>
-        </div>
-      </section>
-
-      {/* Before and After Carousel Section */}
-      <section className="bg-white pt-4 lg:pt-2 pb-12 px-4 sm:px-6 lg:px-8">
-        <div className="container-custom">
-
-          {/* Carousel Container */}
-          <div className="relative max-w-6xl mx-auto mt-8 lg:-mt-12 mb-4 lg:mb-6">
-            {/* Carousel Track */}
-            <div className="flex overflow-hidden">
-              <div className="flex transition-transform duration-500 ease-in-out w-full" id="carousel-track">
-                {/* Before and After Images */}
-                {[
-                  { image: "/11.png", name: "Gabriela Oliveira", age: "31 anos", weight: "-25kg", city: "Brasília - DF" },
-                  { image: "/13.png", name: "Bruno Rodrigues", age: "43 anos", weight: "-28kg", city: "Fortaleza - CE" },
-                  { image: "/14.png", name: "Priscila Santos", age: "30 anos", weight: "-24kg", city: "Goiânia - GO" },
-                  { image: "/10.png", name: "Isabela Lima", age: "29 anos", weight: "-16kg", city: "Florianópolis - SC" },
-                  { image: "/12.png", name: "Juliana Mendes", age: "27 anos", weight: "-19kg", city: "Curitiba - PR" },
-                  { image: "/15.png", name: "Rafaela Fernandes", age: "26 anos", weight: "-18kg", city: "Manaus - AM" }
-                ].map((item, index) => (
-                  <div key={index} className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-2 md:px-2">
-                    <img 
-                      src={item.image} 
-                      alt={`Resultado ${index + 1}`}
-                      className="w-full h-80 sm:h-80 lg:h-[36rem] object-contain rounded-lg mx-auto"
-                    />
-                    <div className="text-center mt-3 lg:-mt-20">
-                      <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900 mb-1">
-                        {item.name} | {item.age} | {item.weight}
-                      </h3>
-                      <p className="text-xs sm:text-sm lg:text-base text-gray-600">
-                        {item.city}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Navigation Buttons */}
-            <button 
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pink-200/40 text-pink-700 p-2 rounded-full shadow-sm hover:bg-pink-300/60 transition-colors duration-200 z-10"
-              onClick={() => navigateCarousel(-1)}
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            
-            <button 
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink-200/40 text-pink-700 p-2 rounded-full shadow-sm hover:bg-pink-300/60 transition-colors duration-200 z-10"
-              onClick={() => navigateCarousel(1)}
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-
-            {/* Dots Indicator */}
-            <div className="flex justify-center mt-8 space-x-2">
-              {[0, 1, 2, 3, 4, 5].map((dot) => (
-                <button
-                  key={dot}
-                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                    dot === currentSlide ? 'bg-pink-600' : 'bg-gray-300'
-                  }`}
-                  onClick={() => goToSlide(dot)}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Fourth Pink Bar Section */}
       <section className="bg-pink-600 py-8 px-4 sm:px-6 lg:px-8">
@@ -420,7 +444,7 @@ const HeroSection = () => {
                   className="w-full lg:w-auto bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold py-3 px-6 rounded-xl text-sm lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   <div className="text-center">
-                    <div className="text-base lg:text-xl">SIM, QUERO EXPERIMENTAR AGORA</div>
+                    <div className="text-base lg:text-xl">SIM, EU QUERO EMAGRECER!</div>
                     <div className="text-xs lg:text-sm font-normal opacity-90 mt-1">
                       CLIQUE AQUI E GARANTA SEU KIT COM DESCONTO
                     </div>
@@ -642,8 +666,8 @@ const HeroSection = () => {
               <svg className="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
-            </div>
-          </div>
+                </div>
+                </div>
         </div>
       </section>
 
@@ -766,7 +790,7 @@ const HeroSection = () => {
               {/* Conteúdo do Vídeo */}
               <div className="relative">
                 <iframe 
-                  src="https://player.vimeo.com/video/1112916686?h=64c0c0c0c0&autoplay=0&loop=0&title=0&byline=0&portrait=0" 
+                  src="https://player.vimeo.com/video/1115818116?h=64c0c0c0c0&autoplay=0&loop=0&title=0&byline=0&portrait=0" 
                   className="w-full h-64"
                   frameBorder="0" 
                   allow="autoplay; fullscreen; picture-in-picture" 
@@ -1182,7 +1206,7 @@ const HeroSection = () => {
             className="w-full lg:w-auto bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold py-3 px-6 rounded-xl text-sm lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             <div className="text-center">
-              <div className="text-base lg:text-xl">SIM, QUERO EXPERIMENTAR AGORA</div>
+              <div className="text-base lg:text-xl">SIM, EU QUERO EMAGRECER!</div>
               <div className="text-xs lg:text-sm font-normal opacity-90 mt-1">
                 CLIQUE AQUI E GARANTA SEU KIT COM DESCONTO
               </div>
@@ -1281,7 +1305,7 @@ const HeroSection = () => {
                 className="w-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold py-3 px-6 rounded-xl text-sm lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 <div className="text-center">
-                  <div className="text-base lg:text-xl">SIM, QUERO EXPERIMENTAR AGORA</div>
+                  <div className="text-base lg:text-xl">SIM, EU QUERO EMAGRECER!</div>
                   <div className="text-xs lg:text-sm font-normal opacity-90 mt-1">
                     CLIQUE AQUI E GARANTA SEU KIT COM DESCONTO
                   </div>
@@ -1379,7 +1403,7 @@ const HeroSection = () => {
                   className="w-full lg:w-auto bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold py-3 px-6 rounded-xl text-sm lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   <div className="text-center">
-                    <div className="text-base lg:text-xl">SIM, QUERO EXPERIMENTAR AGORA</div>
+                    <div className="text-base lg:text-xl">SIM, EU QUERO EMAGRECER!</div>
                     <div className="text-xs lg:text-sm font-normal opacity-90 mt-1">
                       CLIQUE AQUI E GARANTA SEU KIT COM DESCONTO
                     </div>
@@ -1734,6 +1758,7 @@ const HeroSection = () => {
           </div>
         </div>
       )}
+
     </section>
   );
 };
