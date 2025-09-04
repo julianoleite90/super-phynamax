@@ -1,6 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+// Adicionar CSS para animação
+const pulseYellowStyle = `
+  @keyframes pulseYellow {
+    0% {
+      box-shadow: 0 0 20px rgba(234, 179, 8, 0.4), 0 0 40px rgba(234, 179, 8, 0.2);
+      border-color: rgba(234, 179, 8, 0.8);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(234, 179, 8, 0.8), 0 0 60px rgba(234, 179, 8, 0.4);
+      border-color: rgba(234, 179, 8, 1);
+    }
+    100% {
+      box-shadow: 0 0 20px rgba(234, 179, 8, 0.4), 0 0 40px rgba(234, 179, 8, 0.2);
+      border-color: rgba(234, 179, 8, 0.8);
+    }
+  }
+`;
+
+// Injetar CSS no head
+if (typeof document !== 'undefined') {
+  const style = document.createElement('style');
+  style.textContent = pulseYellowStyle;
+  document.head.appendChild(style);
+}
+
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = 6;
@@ -507,7 +532,11 @@ const HeroSection = () => {
             </div>
 
             {/* Kit 5 Potes */}
-            <div className="bg-white rounded-xl shadow-2xl border-2 border-yellow-400 transform -translate-y-2 hover:-translate-y-4 transition-all duration-300">
+            <div className="bg-white rounded-xl shadow-2xl border-2 border-yellow-400 transform -translate-y-2 hover:-translate-y-4 transition-all duration-300"
+                 style={{
+                   boxShadow: '0 0 20px rgba(234, 179, 8, 0.6)',
+                   animation: 'pulseYellow 2s infinite'
+                 }}>
               <div className="p-4 lg:p-8 text-center">
                 <div className="relative mb-0">
                   <img src="/8f.png" alt="Kit 5 Potes" className="w-[17rem] h-[17rem] md:w-80 md:h-80 lg:w-[32rem] lg:h-[32rem] mx-auto object-contain -mt-20 md:-mt-36 lg:-mt-56" />
