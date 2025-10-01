@@ -8,7 +8,7 @@ import Treatment from '@/components/Treatment'
 import Pricing from '@/components/Pricing'
 import Guarantee from '@/components/Guarantee'
 import Reviews from '@/components/Reviews'
-import Faq from '@/components/Faq'
+import FAQ from '@/components/FAQ'
 import Footer from '@/components/Footer'
 import FacebookPixel from '@/components/FacebookPixel'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
@@ -113,7 +113,7 @@ export default function OficialTjPage() {
         <Pricing />
         <Guarantee />
         <Reviews />
-        <Faq />
+        <FAQ />
         <Footer />
       </main>
     </>
