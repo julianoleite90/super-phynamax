@@ -11,7 +11,7 @@ export default function Header() {
       header.style.top = '0'
       header.style.left = '0'
       header.style.right = '0'
-      header.style.zIndex = '9999'
+      header.style.zIndex = '99999'
       header.style.width = '100%'
     }
   }, [])
@@ -22,7 +22,7 @@ export default function Header() {
       top: 0, 
       left: 0, 
       right: 0, 
-      zIndex: 9999, 
+      zIndex: 99999, 
       width: '100%' 
     }}>
       <div className="container-custom">
