@@ -6,7 +6,7 @@ import Kits from '@/components/Kits'
 import Pricing from '@/components/Pricing'
 import Treatment from '@/components/Treatment'
 import Guarantee from '@/components/Guarantee'
-import BeforeAfter from '@/components/BeforeAfter'
+// import BeforeAfter from '@/components/BeforeAfter'
 import FAQ from '@/components/FAQ'
 import Reviews from '@/components/Reviews'
 import Footer from '@/components/Footer'
@@ -146,7 +146,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Features />
-      <BeforeAfter />
+      {/* <BeforeAfter /> */}
       <Testimonials />
       <Kits />
       <Pricing />

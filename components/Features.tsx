@@ -9,25 +9,7 @@ export default function Features() {
   const [scrollLeft, setScrollLeft] = useState(0)
   const carouselRef = useRef<HTMLDivElement>(null)
 
-  // Auto-scroll effect - only on desktop
-  useEffect(() => {
-    if (!carouselRef.current || isDragging) return
-
-    // Check if it's mobile (screen width < 768px)
-    const isMobile = window.innerWidth < 768
-    if (isMobile) return
-
-    const interval = setInterval(() => {
-      if (carouselRef.current) {
-        carouselRef.current.scrollLeft += 1
-        if (carouselRef.current.scrollLeft >= carouselRef.current.scrollWidth - carouselRef.current.clientWidth) {
-          carouselRef.current.scrollLeft = 0
-        }
-      }
-    }, 50)
-
-    return () => clearInterval(interval)
-  }, [isDragging])
+  // Auto-scroll effect removed - carousel is now static
 
   const handleMouseDown = (e: React.MouseEvent) => {
     setIsDragging(true)
@@ -70,6 +52,24 @@ export default function Features() {
     setIsDragging(false)
   }
 
+  const scrollToLeft = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: -300,
+        behavior: 'smooth'
+      })
+    }
+  }
+
+  const scrollToRight = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: 300,
+        behavior: 'smooth'
+      })
+    }
+  }
+
   return (
     <section id="beneficios" className="section-padding bg-white">
       <div className="container-custom">
@@ -84,7 +84,32 @@ export default function Features() {
         </div>
 
         {/* Image Carousel */}
-        <div className="mb-16 -mx-4 sm:-mx-6 lg:-mx-8 overflow-hidden">
+        <div className="mb-16 -mx-4 sm:-mx-6 lg:-mx-8 overflow-hidden relative">
+          {/* Desktop Navigation Arrows */}
+          <div className="hidden md:block">
+            {/* Left Arrow */}
+            <button
+              onClick={scrollToLeft}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 transition-all duration-300 hover:scale-110"
+              aria-label="Anterior"
+            >
+              <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            
+            {/* Right Arrow */}
+            <button
+              onClick={scrollToRight}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 transition-all duration-300 hover:scale-110"
+              aria-label="Próximo"
+            >
+              <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+
           <div 
             ref={carouselRef}
             className="flex overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing"
@@ -98,66 +123,100 @@ export default function Features() {
           >
             <div className="flex space-x-4">
               {/* First set */}
+              {/* Vimeo Video - First item */}
+              <div className="h-96 md:h-72 w-auto flex-shrink-0">
+                <iframe
+                  src="https://player.vimeo.com/video/1115818116?autoplay=0&loop=0&controls=1&responsive=1&portrait=0&title=0&byline=0&badge=0&background=0&muted=1&playsinline=1"
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  title="Depoimento Phynamax"
+                ></iframe>
+              </div>
               <img
                 src="/images/d1.png"
                 alt="Depoimento 1"
-                className="h-72 md:h-72 w-auto object-contain flex-shrink-0"
+                className="h-96 md:h-72 w-auto object-contain flex-shrink-0"
               />
-              <img
-                src="/images/d5.png"
-                alt="Depoimento 5"
-                className="h-72 md:h-72 w-auto object-contain flex-shrink-0"
-              />
+              {/* Vimeo Video - Second item */}
+              <div className="h-96 md:h-72 w-auto flex-shrink-0">
+                <iframe
+                  src="https://player.vimeo.com/video/1115870579?autoplay=0&loop=0&controls=1&responsive=1&portrait=0&title=0&byline=0&badge=0&background=0&muted=1&playsinline=1"
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  title="Depoimento Phynamax 2"
+                ></iframe>
+              </div>
               <img
                 src="/images/d2.png"
                 alt="Depoimento 2"
-                className="h-72 md:h-72 w-auto object-contain flex-shrink-0"
+                className="h-96 md:h-72 w-auto object-contain flex-shrink-0"
               />
               <img
                 src="/images/d4.png"
                 alt="Depoimento 4"
-                className="h-72 md:h-72 w-auto object-contain flex-shrink-0"
+                className="h-96 md:h-72 w-auto object-contain flex-shrink-0"
               />
               <img
                 src="/images/d3.png"
                 alt="Depoimento 3"
-                className="h-72 md:h-72 w-auto object-contain flex-shrink-0"
+                className="h-96 md:h-72 w-auto object-contain flex-shrink-0"
               />
               <img
                 src="/images/d6.png"
                 alt="Depoimento 6"
-                className="h-72 md:h-72 w-auto object-contain flex-shrink-0"
+                className="h-96 md:h-72 w-auto object-contain flex-shrink-0"
               />
               {/* Second set for seamless loop */}
+              {/* Vimeo Video - First item of second set */}
+              <div className="h-96 md:h-72 w-auto flex-shrink-0">
+                <iframe
+                  src="https://player.vimeo.com/video/1115818116?autoplay=0&loop=0&controls=1&responsive=1&portrait=0&title=0&byline=0&badge=0&background=0&muted=1&playsinline=1"
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  title="Depoimento Phynamax"
+                ></iframe>
+              </div>
               <img
                 src="/images/d1.png"
                 alt="Depoimento 1"
-                className="h-72 md:h-72 w-auto object-contain flex-shrink-0"
+                className="h-96 md:h-72 w-auto object-contain flex-shrink-0"
               />
-              <img
-                src="/images/d5.png"
-                alt="Depoimento 5"
-                className="h-72 md:h-72 w-auto object-contain flex-shrink-0"
-              />
+              {/* Vimeo Video - Second item */}
+              <div className="h-96 md:h-72 w-auto flex-shrink-0">
+                <iframe
+                  src="https://player.vimeo.com/video/1115870579?autoplay=0&loop=0&controls=1&responsive=1&portrait=0&title=0&byline=0&badge=0&background=0&muted=1&playsinline=1"
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  title="Depoimento Phynamax 2"
+                ></iframe>
+              </div>
               <img
                 src="/images/d2.png"
                 alt="Depoimento 2"
-                className="h-72 md:h-72 w-auto object-contain flex-shrink-0"
+                className="h-96 md:h-72 w-auto object-contain flex-shrink-0"
               />
               <img
                 src="/images/d4.png"
                 alt="Depoimento 4"
-                className="h-72 md:h-72 w-auto object-contain flex-shrink-0"
+                className="h-96 md:h-72 w-auto object-contain flex-shrink-0"
               />
               <img
                 src="/images/d3.png"
                 alt="Depoimento 3"
-                className="h-72 md:h-72 w-auto object-contain flex-shrink-0"
+                className="h-96 md:h-72 w-auto object-contain flex-shrink-0"
               />
               <img
                 src="/images/d6.png"
                 alt="Depoimento 6"
-                className="h-72 md:h-72 w-auto object-contain flex-shrink-0"
+                className="h-96 md:h-72 w-auto object-contain flex-shrink-0"
               />
             </div>
           </div>

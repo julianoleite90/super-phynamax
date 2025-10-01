@@ -141,7 +141,7 @@ export default function Testimonials() {
                 As fibras poderosas de alto impacto transformam seu intestino em uma máquina de queima calórica, disparando o metabolismo em até 27% com a produção de ácidos graxos que queimam calorias.
               </p>
               
-              <p className="text-xl text-gray-600 mt-4">
+              <p className="text-xl text-gray-600 mt-4 hidden md:block">
                 Os antioxidantes, maximizam a energia e equilibram hormônios como a leptina, eliminando a fome excessiva e acelerando o emagrecimento.
               </p>
 

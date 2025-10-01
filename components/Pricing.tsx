@@ -159,24 +159,24 @@ export default function Pricing() {
   }, [])
 
   return (
-    <section id="precos" className="section-padding bg-white relative">
+    <section id="precos" className="py-8 md:py-12 bg-white relative">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Peça hoje e receba em até 7 dias com 30 dias de garantia
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
           envie o seu vídeo também
         </p>
-        </div>
+        </div> */}
 
         {/* Video Carousel */}
-        <div className="mb-16">
+        {/* <div className="mb-16">
           <div className="overflow-hidden -mx-4 sm:-mx-6 lg:-mx-8">
             <div className="flex animate-scroll">
               {/* Carregamento progressivo de vídeos */}
-              {[...videos, ...videos, ...videos].slice(0, visibleVideos).map((video, index) => (
+              {/* {[...videos, ...videos, ...videos].slice(0, visibleVideos).map((video, index) => (
                 <div key={`${video.id}-${index}`} className="flex-shrink-0 w-32 h-56 sm:w-40 sm:h-72 mx-2">
                   <div className="w-full h-full bg-gray-200 rounded-lg overflow-hidden">
                     {isIntersecting ? (
@@ -202,11 +202,10 @@ export default function Pricing() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       
-      {/* Gradient separator line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-pink-400 to-transparent"></div>
+      {/* Gradient separator line - REMOVIDA */}
     </section>
   )
 }

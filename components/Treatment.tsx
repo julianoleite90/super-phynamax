@@ -10,11 +10,11 @@ export default function Treatment() {
     window.location.href = urls[kitType]
   }
   return (
-    <section id="treatment" className="section-padding bg-white relative">
+    <section id="treatment" className="pt-0 pb-16 bg-white relative">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
           Escolha o melhor tratamento para a perda de peso
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -23,9 +23,9 @@ export default function Treatment() {
         </div>
 
         {/* Kits Section */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto px-4 md:px-0">
           {/* Kit 5 Frascos */}
-          <div className="bg-white rounded-xl shadow-lg p-6 border-2 border-gray-200 hover:border-green-500 transition-all duration-300">
+          <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 border-2 border-gray-200 hover:border-green-500 transition-all duration-300">
             <div className="text-center">
               <img 
                 src="/images/5-frascos.png" 
@@ -37,9 +37,9 @@ export default function Treatment() {
               
               <div className="mb-4">
                 <span className="text-lg text-gray-500 line-through">De R$ 1.087,00</span>
-                <div className="text-2xl font-bold text-green-600">Por: 8x R$ 57,00</div>
+                <div className="text-2xl font-bold text-green-600">Por: 12x R$38,00</div>
                 <div className="text-sm text-green-500 font-medium">sem juros</div>
-                <div className="text-sm text-gray-600">Ganhe 10% de desconto no PIX</div>
+                <div className="text-sm text-gray-600 mt-1">Ou R$410,40 no PIX</div>
               </div>
 
               <button 
@@ -75,9 +75,9 @@ export default function Treatment() {
               
               <div className="mb-4">
                 <span className="text-lg text-gray-500 line-through">De R$ 787,00</span>
-                <div className="text-2xl font-bold text-green-600">Por: 8x R$ 48,00</div>
+                <div className="text-2xl font-bold text-green-600">Por: 12x R$32,00</div>
                 <div className="text-sm text-green-500 font-medium">sem juros</div>
-                <div className="text-sm text-gray-600">Ganhe 10% de desconto no PIX</div>
+                <div className="text-sm text-gray-600 mt-1">Ou R$345,60 no PIX</div>
               </div>
 
               <button 
@@ -96,7 +96,7 @@ export default function Treatment() {
           </div>
 
           {/* Kit 1 Frasco */}
-          <div className="bg-white rounded-xl shadow-lg p-6 border-2 border-gray-200 hover:border-green-500 transition-all duration-300">
+          <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 border-2 border-gray-200 hover:border-green-500 transition-all duration-300">
             <div className="text-center">
               <img 
                 src="/images/1-frasco.png" 
@@ -108,9 +108,9 @@ export default function Treatment() {
               
               <div className="mb-4">
                 <span className="text-lg text-gray-500 line-through">De R$ 384,00</span>
-                <div className="text-2xl font-bold text-green-600">Por: 8x R$ 36,00</div>
+                <div className="text-2xl font-bold text-green-600">Por: 12x R$24,00</div>
                 <div className="text-sm text-green-500 font-medium">sem juros</div>
-                <div className="text-sm text-gray-600">Ganhe 10% de desconto no PIX</div>
+                <div className="text-sm text-gray-600 mt-1">Ou R$259,20 no PIX</div>
               </div>
 
               <button 

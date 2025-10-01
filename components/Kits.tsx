@@ -3,8 +3,7 @@
 export default function Kits() {
   return (
     <section id="kits" className="py-8 md:py-16 px-4 sm:px-6 lg:px-8 bg-white relative">
-      {/* Linha de separação com gradiente prateado */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-pink-400 to-transparent"></div>
+      {/* Linha de separação com gradiente prateado - REMOVIDA */}
       <div className="container-custom relative z-10">
         {/* Header */}
         <div className="text-center mb-8 md:mb-16">
